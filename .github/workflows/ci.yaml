@@ -22,6 +22,8 @@ jobs:
 
       - run: cabal freeze
 
+      - run: cat cabal.project.freeze
+
       - uses: actions/cache@v2
         with:
           path: ${{ steps.setup-haskell.outputs.cabal-store  }}
