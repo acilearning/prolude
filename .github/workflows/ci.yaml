@@ -34,3 +34,7 @@ jobs:
       - run: cabal test --test-show-details direct
       
       - run: cabal sdist
+
+      - uses: actions/upload-artifact@v2
+        with:
+          path: dist-newstyle/sdist/prolude-*.tar.gz
