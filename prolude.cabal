@@ -1,0 +1,25 @@
+cabal-version: >= 1.2
+name: prolude
+version: 0
+build-type: Simple
+library
+    exposed-modules: 
+        Prolude
+        Prolude.Aeson 
+        Prolude.Core 
+        Prolude.Exception 
+        Prolude.Json 
+        Prolude.MongoDB 
+        Prolude.Text 
+        Prolude.Time 
+
+    build-depends: 
+        base
+        , aeson
+        , mongoDB
+        , text
+        , time
+        , scientific
+        , vector 
+        , safe-exceptions
+        , bytestring
