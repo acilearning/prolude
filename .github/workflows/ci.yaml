@@ -41,3 +41,5 @@ jobs:
         with:
           path: dist-newstyle/sdist/prolude-*.tar.gz
           name: prolude.tar.gz
+
+      - run: cabal check
