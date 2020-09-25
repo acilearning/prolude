@@ -1,0 +1,41 @@
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+
+  build:
+    strategy:
+      matrix:
+        os: [ ubuntu-18.04 ]
+        ghc: [ '8.10' ]
+        cabal: [ '3.2' ]
+    runs-on: ubuntu-18.04
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - id: setup-haskell
+        uses: actions/setup-haskell@v1.1
+        with:
+          ghc-version: '8.10'
+          cabal-version: '3.2'
+
+      - run: cabal freeze
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ steps.setup-haskell.outputs.cabal-store  }}
+          key: ${{ hashFiles('cabal.project.freeze') }}
+
+      - run: cabal build --only-dependencies
+
+      - run: cabal build
+
+      - run: cabal test --test-show-details direct
+      
+      - run: cabal sdist
