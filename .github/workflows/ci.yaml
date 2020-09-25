@@ -1,0 +1,45 @@
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - id: setup-haskell
+        uses: actions/setup-haskell@v1.1
+        with:
+          ghc-version: '8.10.2'
+          cabal-version: '3.4.0.0'
+
+      - run: cabal freeze
+
+      - run: cat cabal.project.freeze
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ steps.setup-haskell.outputs.cabal-store  }}
+          key: ${{ hashFiles('cabal.project.freeze') }}
+
+      - run: cabal build --only-dependencies
+
+      - run: cabal build
+
+      - run: cabal test --test-show-details direct
+      
+      - run: cabal sdist
+
+      - uses: actions/upload-artifact@v2
+        with:
+          path: dist-newstyle/sdist/prolude-*.tar.gz
+          name: prolude.tar.gz
+
+      - run: cabal check
