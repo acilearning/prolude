@@ -32,7 +32,7 @@ library
 
     build-depends: 
         base >= 4.13.0 && < 4.15
-        , aeson >= 1.5.4 && < 1.6
+        , aeson >= 1.4.7 && < 1.5
         , bytestring >= 0.10.10 && < 0.11
         , mongoDB >= 2.7.0 && < 2.8
         , safe-exceptions >= 0.1.7 && < 0.2
