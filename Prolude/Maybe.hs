@@ -3,4 +3,15 @@ module Prolude.Maybe
     )
 where
 
-import Data.Maybe (Maybe(Just, Nothing), maybe)
+import Data.Maybe 
+    ( Maybe(Just, Nothing)
+    , catMaybes
+    , fromJust
+    , fromMaybe
+    , isJust
+    , isNothing
+    , listToMaybe
+    , mapMaybe
+    , maybe
+    , maybeToList
+    )
