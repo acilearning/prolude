@@ -6,7 +6,6 @@ where
 import Data.Maybe 
     ( Maybe(Just, Nothing)
     , catMaybes
-    , fromJust
     , fromMaybe
     , isJust
     , isNothing
