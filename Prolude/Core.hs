@@ -12,7 +12,6 @@ module Prolude.Core
   , module Data.Int
   , module Data.Kind
   , module Data.List
-  , module Data.Maybe
   , module Data.Monoid
   , module Data.Ord
   , module Data.Semigroup
@@ -67,7 +66,6 @@ import Data.List
   , zip
   , zipWith
   )
-import Data.Maybe (Maybe(Just, Nothing), maybe)
 import Data.Monoid (Monoid(mempty), mappend, mconcat)
 import Data.Ord (Ord(compare, (<=)), Ordering(EQ, GT, LT), max, min, (<), (>), (>=))
 import Data.Semigroup (Semigroup((<>)))
