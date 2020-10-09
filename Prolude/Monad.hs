@@ -4,8 +4,7 @@ module Prolude.Monad
 where
 
 import Control.Monad 
-    ( forM
-    , forM_
+    ( forM_
     , guard
     , unless
     , void
