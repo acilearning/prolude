@@ -4,6 +4,7 @@ module Prolude
   , module Prolude.Exception
   , module Prolude.Json
   , module Prolude.Maybe
+  , module Prolude.Monad
   , module Prolude.MongoDB
   , module Prolude.Text
   , module Prolude.Time
@@ -15,6 +16,7 @@ import Prolude.Core
 import Prolude.Exception
 import Prolude.Json
 import Prolude.Maybe
+import Prolude.Monad
 import Prolude.MongoDB
 import Prolude.Text
 import Prolude.Time
