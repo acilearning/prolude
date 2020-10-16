@@ -35,7 +35,7 @@ library
 
     build-depends: 
         base >= 4.13.0 && < 4.15
-        , aeson >= 1.4.7 && < 1.5
+        , aeson >= 1.4.7 && < 1.6
         , array >= 0.3 && < 0.6
         , bytestring >= 0.10.10 && < 0.11
         , containers >= 0.6.2.1 && < 0.6.3.1
