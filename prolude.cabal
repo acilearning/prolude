@@ -25,8 +25,8 @@ library
         Prolude.Aeson 
         Prolude.Core 
         Prolude.Exception 
+        Prolude.Foldable
         Prolude.Json 
-        Prolude.Map
         Prolude.Maybe 
         Prolude.Monad 
         Prolude.MongoDB 
