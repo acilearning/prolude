@@ -19,6 +19,7 @@ import GHC.Exts (fromList)
 import qualified Data.Bool as Bool
 import qualified Data.Foldable as Foldable
 import qualified Data.Ord as Ord
+import qualified Data.Set as Set
 
 emptySet :: Set a
 emptySet = Set.empty
