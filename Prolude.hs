@@ -1,6 +1,7 @@
 module Prolude
   ( module Prolude.Aeson
   , module Prolude.Core
+  , module Prolude.Csv
   , module Prolude.Exception
   , module Prolude.Foldable
   , module Prolude.Json
@@ -14,6 +15,7 @@ where
 
 import Prolude.Aeson
 import Prolude.Core
+import Prolude.Csv
 import Prolude.Exception
 import Prolude.Foldable
 import Prolude.Json

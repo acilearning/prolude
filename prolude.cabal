@@ -1,7 +1,7 @@
 cabal-version: >= 1.10
 
 name: prolude
-version: 0.0.0.4
+version: 0.0.0.5
 synopsis: ITProTV's custom prelude
 description:
     Prolude is ITProTV's custom prelude.
@@ -24,6 +24,7 @@ library
         Prolude
         Prolude.Aeson 
         Prolude.Core 
+        Prolude.Csv 
         Prolude.Exception 
         Prolude.Foldable
         Prolude.Json 
