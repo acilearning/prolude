@@ -20,20 +20,21 @@ source-repository head
 library
     default-language: Haskell2010
 
-    exposed-modules: 
+    exposed-modules:
         Prolude
-        Prolude.Aeson 
-        Prolude.Core 
-        Prolude.Exception 
+        Prolude.Aeson
+        Prolude.Core
+        Prolude.Exception
         Prolude.Foldable
-        Prolude.Json 
-        Prolude.Maybe 
-        Prolude.Monad 
-        Prolude.MongoDB 
-        Prolude.Text 
-        Prolude.Time 
+        Prolude.Json
+        Prolude.Maybe
+        Prolude.Monad
+        Prolude.MonadIO
+        Prolude.MongoDB
+        Prolude.Text
+        Prolude.Time
 
-    build-depends: 
+    build-depends:
         base >= 4.13.0 && < 4.15
         , aeson >= 1.4.7 && < 1.6
         , bytestring >= 0.10.10 && < 0.11
