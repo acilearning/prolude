@@ -2,6 +2,10 @@
 
 module Prolude.Csv
     ( module Data.Csv
+    , CsvFromField
+    , CsvToField
+    , parseCsvField
+    , toCsvField
     )
 where
 
