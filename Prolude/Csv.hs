@@ -2,8 +2,8 @@
 
 module Prolude.Csv
     ( module Data.Csv
-    , CsvFromField
-    , CsvToField
+    , FromCsvField
+    , ToCsvField
     , parseCsvField
     , toCsvField
     )
@@ -15,11 +15,11 @@ import Data.Csv
     )
 import qualified Data.Csv as Csv
 
-type CsvFromField = Csv.FromField
-type CsvToField = Csv.ToField
+type FromCsvField = Csv.FromField
+type ToCsvField = Csv.ToField
 
-parseCsvField :: CsvFromField a => Csv.Field -> Csv.Parser a
+parseCsvField :: FromCsvField a => Csv.Field -> Csv.Parser a
 parseCsvField = Csv.parseField
 
-toCsvField :: CsvToField a => a -> Csv.Field
+toCsvField :: ToCsvField a => a -> Csv.Field
 toCsvField = Csv.toField
