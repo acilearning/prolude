@@ -1,5 +1,6 @@
 module Prolude
   ( module Prolude.Aeson
+  , module Prolude.ByteString
   , module Prolude.Core
   , module Prolude.Csv
   , module Prolude.Exception
@@ -15,6 +16,7 @@ module Prolude
 where
 
 import Prolude.Aeson
+import Prolude.ByteString
 import Prolude.Core
 import Prolude.Csv
 import Prolude.Exception
