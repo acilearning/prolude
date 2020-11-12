@@ -33,6 +33,7 @@ library
         Prolude.Monad
         Prolude.MonadIO
         Prolude.MongoDB
+        Prolude.Prim
         Prolude.Text
         Prolude.Time
 
