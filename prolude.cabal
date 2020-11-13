@@ -34,6 +34,7 @@ library
         Prolude.MonadIO
         Prolude.MongoDB
         Prolude.Persist
+        Prolude.Prim
         Prolude.Text
         Prolude.Time
 

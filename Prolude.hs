@@ -11,6 +11,7 @@ module Prolude
   , module Prolude.MonadIO
   , module Prolude.MongoDB
   , module Prolude.Persist
+  , module Prolude.Prim
   , module Prolude.Text
   , module Prolude.Time
   )
@@ -28,5 +29,6 @@ import Prolude.Monad
 import Prolude.MonadIO
 import Prolude.MongoDB
 import Prolude.Persist
+import Prolude.Prim
 import Prolude.Text
 import Prolude.Time
