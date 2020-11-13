@@ -1,14 +1,14 @@
 module Prolude.Text
-  ( module Data.Text
-  , fromText
-  , toText
+  ( Text.Text
+  , stringToText
+  , textToString
   )
 where
 
-import Data.Text (Text, pack, unpack)
+import qualified Data.Text as Text
 
-fromText :: Text -> String
-fromText = unpack
+stringToText :: String -> Text.Text
+stringToText = Text.pack
 
-toText :: String -> Text
-toText = pack
+textToString :: Text.Text -> String
+textToString = Text.unpack
