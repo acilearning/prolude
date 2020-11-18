@@ -12,6 +12,7 @@ module Prolude
   , module Prolude.MongoDB
   , module Prolude.Persist
   , module Prolude.Prim
+  , module Prolude.Test
   , module Prolude.Text
   , module Prolude.Time
   )
@@ -30,5 +31,6 @@ import Prolude.MonadIO
 import Prolude.MongoDB
 import Prolude.Persist
 import Prolude.Prim
+import Prolude.Test
 import Prolude.Text
 import Prolude.Time

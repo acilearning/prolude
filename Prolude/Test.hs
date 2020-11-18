@@ -1,11 +1,21 @@
 {-# LANGUAGE DerivingVia #-}
 {-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE MonoLocalBinds #-}
 {-# LANGUAGE TypeApplications #-}
 {-# LANGUAGE UndecidableInstances #-}
 
-module Prolude.Test where
+module Prolude.Test 
+  ( module Test.QuickCheck
+  , AlphaNumByteString(..)
+  , AlphaNumText(..)
+  , ArbitraryUniform(..)
+  , TextUuid(..)
+  , arbitraryIO
+  )
+where
 
 import Test.QuickCheck (Arbitrary(arbitrary), generate, resize, sublistOf)
+import Test.QuickCheck.Instances ()
 import qualified Control.Monad.IO.Class as Monad
 import qualified Data.Aeson as Aeson
 import qualified Data.ByteString as ByteString
