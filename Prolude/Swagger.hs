@@ -13,8 +13,8 @@ import qualified Data.Swagger.Declare as Swagger
 import qualified Data.Swagger.Internal.Schema as Swagger
 import qualified Data.Swagger.Internal.TypeShape as Swagger
 
-type SwaggerToParamSchema a = Swagger.ToParamSchema a
-type SwaggerToSchema a = Swagger.ToSchema a
+type SwaggerToParamSchema = Swagger.ToParamSchema
+type SwaggerToSchema = Swagger.ToSchema
 
 defaultDeclareNamedSchema
   :: Applicative f => (Swagger.Schema -> Swagger.Schema) -> proxy a -> f Swagger.NamedSchema
