@@ -68,6 +68,7 @@ import Data.List
   )
 import Data.Monoid (Monoid(mempty), mappend, mconcat)
 import Data.Ord (Ord(compare, (<=)), Ordering(EQ, GT, LT), max, min, (<), (>), (>=))
+import Data.Proxy (Proxy(Proxy))
 import Data.Semigroup (Semigroup((<>)))
 import Data.String (String)
 import Data.Traversable (Traversable(mapM, sequence, traverse))
