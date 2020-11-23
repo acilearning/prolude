@@ -2,8 +2,10 @@ module Prolude.Text
   ( LazyText
   , Text.Text
   , lazyTextToString
+  , lazyTextToText
   , stringToLazyText
   , stringToText
+  , textToLazyText
   , textToString
   )
 where
@@ -24,3 +26,9 @@ stringToLazyText = LazyText.pack
 
 lazyTextToString :: LazyText -> String
 lazyTextToString = LazyText.unpack
+
+textToLazyText :: Text.Text -> LazyText
+textToLazyText = LazyText.fromStrict
+
+lazyTextToText :: LazyText -> Text.Text
+lazyTextToText = LazyText.toStrict
