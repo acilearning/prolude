@@ -16,6 +16,7 @@ module Prolude
   , module Prolude.Test
   , module Prolude.Text
   , module Prolude.Time
+  , module Prolude.Uuid
   )
 where
 
@@ -36,3 +37,4 @@ import Prolude.Swagger
 import Prolude.Test
 import Prolude.Text
 import Prolude.Time
+import Prolude.Uuid
