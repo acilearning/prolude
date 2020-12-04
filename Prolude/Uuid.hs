@@ -7,6 +7,7 @@ module Prolude.Uuid
     )
 where
 
+import Control.Monad.IO.Class (MonadIO(liftIO))
 import qualified Data.Maybe as Maybe
 import qualified Data.Text as Text
 import qualified Data.UUID as UUID
@@ -25,5 +26,5 @@ textToUuid = UUID.fromText
 wordsToUuid :: Word.Word32 -> Word.Word32 -> Word.Word32 -> Word.Word32 -> Uuid
 wordsToUuid = UUID.fromWords
 
-randomUuid :: IO.IO Uuid
-randomUuid = UUID.nextRandom
+randomUuid :: MonadIO m => m Uuid
+randomUuid = liftIO UUID.nextRandom
