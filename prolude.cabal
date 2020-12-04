@@ -1,7 +1,7 @@
 cabal-version: >= 1.10
 
 name: prolude
-version: 0.0.0.12
+version: 0.0.0.13
 synopsis: ITProTV's custom prelude
 description:
     Prolude is ITProTV's custom prelude.
@@ -29,6 +29,7 @@ library
         Prolude.Exception
         Prolude.Foldable
         Prolude.Json
+        Prolude.Lens
         Prolude.Maybe
         Prolude.Monad
         Prolude.MonadIO
@@ -52,6 +53,7 @@ library
         , mtl >= 2.2.2 && < 2.3
         , QuickCheck >= 2.14.1 && < 2.15
         , quickcheck-instances >= 0.3.25 && < 0.4
+        , lens >= 4.19.2 && < 4.20
         , persistent >= 2.8 && < 3
         , persistent-mongoDB >= 2.8 && < 3
         , safe-exceptions >= 0.1.7 && < 0.2
