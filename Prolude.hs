@@ -6,6 +6,7 @@ module Prolude
   , module Prolude.Exception
   , module Prolude.Foldable
   , module Prolude.Json
+  , module Prolude.Lens
   , module Prolude.Maybe
   , module Prolude.Monad
   , module Prolude.MonadIO
@@ -27,6 +28,7 @@ import Prolude.Csv
 import Prolude.Exception
 import Prolude.Foldable
 import Prolude.Json
+import Prolude.Lens
 import Prolude.Maybe
 import Prolude.Monad
 import Prolude.MonadIO
