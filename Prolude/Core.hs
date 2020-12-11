@@ -14,6 +14,7 @@ module Prolude.Core
   , module Data.List
   , module Data.Monoid
   , module Data.Ord
+  , module Data.Proxy
   , module Data.Semigroup
   , module Data.String
   , module Data.Traversable
