@@ -1,10 +1,19 @@
 module Prolude.ByteString
-    ( module Data.ByteString
-    , LazyByteString
-    , putLazyByteString
-    , writeByteStringToFile
-    )
+  ( -- * ByteString re-exports
+    module Data.ByteString
+    -- * ByteString functions
+  , writeByteStringToFile
+    -- * LazyByteString type alias
+    -- $alias
+  , LazyByteString
+    -- * LazyByteString functions
+  , putLazyByteString
+  )
 where
+
+{- $alias
+We created a type alias for LazyByteString.ByteString simply called LazyByteString.
+-}
 
 import Data.ByteString (ByteString)
 import qualified Control.Monad.IO.Class as MonadIO
