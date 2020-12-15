@@ -1,9 +1,15 @@
 {-# LANGUAGE PatternSynonyms #-}
 
 module Prolude.Aeson
-  ( module Data.Aeson
+  ( -- * Aeson re-exports
+    -- $aeson
+    module Data.Aeson
+    -- * Alias types
+    -- $alias
   , JsonOptions
   , JsonValue
+    -- * Pattern synonyms
+    -- $pattern
   , pattern JsonArray
   , pattern JsonBoolean
   , pattern JsonNull
@@ -12,6 +18,21 @@ module Prolude.Aeson
   , pattern JsonString
   )
 where
+
+{- $aeson
+These are our re-exports from Aeson. They include:
+- The FromJSON and ToJSON classes
+- Generic JSON parsing
+- (.!=), (.:), (.:?), (.=)
+-}
+
+{- $alias
+We created type aliases for Aeson.Options and Aeson.Value.
+-}
+
+{- $pattern
+We created pattern synonyms for the Aeson.Value constructors.
+-}
 
 import Data.Aeson
   ( FromJSON
