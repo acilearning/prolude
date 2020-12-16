@@ -1,13 +1,26 @@
 {-# LANGUAGE ConstraintKinds #-}
 
 module Prolude.Csv
-    ( module Data.Csv
+    ( -- * Csv re-exports
+      module Data.Csv
+      -- * Alias types
+      -- $alias
     , FromCsvField
     , ToCsvField
+      -- * Alias functions
+      -- $functions
     , parseCsvField
     , toCsvField
     )
 where
+
+{- $alias
+We created type aliases for the Csv.ToField and Csv.FromField classes.
+-}
+
+{- $functions
+We created aliases for the Csv.parseField and Csv.toField functions.
+-}
 
 import Data.Csv 
     ( DefaultOrdered
