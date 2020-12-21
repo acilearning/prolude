@@ -47,33 +47,6 @@ module Prolude.MongoDB
   )
 where
 
-{- $type
-We created type aliases for specific Mongo types. These include:
-- Action
-- Collection
-- Database
-- Document
-- Field
-- Label
-- Query
-- Selector
-- Val 
-- Value
--}
-
-{- $synonyms
-We created pattern synonyms for the MongoValue constructors.
--}
-
-{- $functions
-We created aliases for specific Mongo functions. These include:
-- failed
-- insert_
-- nModified
-- select
-- updateMany
--}
-
 import Prolude.Core
 
 import Database.MongoDB (ObjectId, UpdateOption(MultiUpdate), fval, genObjectId, (=:))
@@ -82,6 +55,18 @@ import qualified Data.Int as Int
 import qualified Data.Text as Text
 import qualified Data.Time as Time
 import qualified Database.MongoDB as Mongo
+
+{- $type
+We created type aliases for specific Mongo types. These include: Action, Collection, Database, Document, Field, Label, Query, Selector, Val, and Value.
+-}
+
+{- $synonyms
+We created pattern synonyms for the MongoValue constructors.
+-}
+
+{- $functions
+We created aliases for specific Mongo functions. These include: failed, insert_, nModified, select, and updateMany.
+-}
 
 type MongoAction = Mongo.Action
 type MongoCollection = Mongo.Collection

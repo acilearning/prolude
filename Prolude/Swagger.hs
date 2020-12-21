@@ -12,14 +12,14 @@ module Prolude.Swagger
     )
 where
 
-{- $alias
-We created type aliases for Swagger.ToSchema and Swagger.ToParamSchema.
--}
-
 import qualified Data.Swagger as Swagger
 import qualified Data.Swagger.Declare as Swagger
 import qualified Data.Swagger.Internal.Schema as Swagger
 import qualified Data.Swagger.Internal.TypeShape as Swagger
+
+{- $alias
+We created type aliases for Swagger.ToSchema and Swagger.ToParamSchema.
+-}
 
 type SwaggerToParamSchema = Swagger.ToParamSchema
 type SwaggerToSchema = Swagger.ToSchema

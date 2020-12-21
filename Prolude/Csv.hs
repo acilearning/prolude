@@ -14,6 +14,12 @@ module Prolude.Csv
     )
 where
 
+import Data.Csv 
+    ( DefaultOrdered
+    , ToNamedRecord
+    )
+import qualified Data.Csv as Csv
+
 {- $alias
 We created type aliases for the Csv.ToField and Csv.FromField classes.
 -}
@@ -21,12 +27,6 @@ We created type aliases for the Csv.ToField and Csv.FromField classes.
 {- $functions
 We created aliases for the Csv.parseField and Csv.toField functions.
 -}
-
-import Data.Csv 
-    ( DefaultOrdered
-    , ToNamedRecord
-    )
-import qualified Data.Csv as Csv
 
 type FromCsvField = Csv.FromField
 type ToCsvField = Csv.ToField
