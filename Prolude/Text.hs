@@ -1,6 +1,9 @@
 module Prolude.Text
-  ( LazyText
+  ( -- $conversions
+    -- * Types
+    LazyText
   , Text.Text
+    -- * Functions
   , lazyTextToString
   , lazyTextToText
   , stringToLazyText
@@ -12,6 +15,18 @@ where
 
 import qualified Data.Text as Text
 import qualified Data.Text.Lazy as LazyText
+
+{- $conversions
++----------+------------------+------------------+----------------+
+| From/To  | LazyText         | String           | Text           |
++----------+------------------+------------------+----------------+
+| LazyText | -                | lazyTextToString | lazyTextToText |
++----------+------------------+------------------+----------------+
+| String   | stringToLazyText | -                | stringToText   |
++----------+------------------+------------------+----------------+
+| Text     | textToLazyText   | textToString     | -              |
++----------+------------------+------------------+----------------+
+-}
 
 type LazyText = LazyText.Text
 

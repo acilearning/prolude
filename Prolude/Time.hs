@@ -1,8 +1,12 @@
 module Prolude.Time
-  ( module Data.Time.Calendar
+  ( -- * Data.Time.Calendar re-exports
+    module Data.Time.Calendar
+    -- * Data.Time.Clock re-exports
   , module Data.Time.Clock
   , module Data.Time.Clock.POSIX
+    -- * Data.Time.Format re-exports
   , module Data.Time.Format
+    -- * Functions
   , getCurrentTime
   )
 where
@@ -13,9 +17,9 @@ import Data.Time.Clock
 import Data.Time.Clock.POSIX (POSIXTime, getPOSIXTime, posixSecondsToUTCTime, utcTimeToPOSIXSeconds)
 import Data.Time.Format (defaultTimeLocale, formatTime)
 
-import Control.Monad.IO.Class (MonadIO(liftIO))
+import qualified Control.Monad.IO.Class as Monad
 import qualified Data.Time as Time
 
 -- | Returns now
-getCurrentTime :: MonadIO m => m UTCTime
-getCurrentTime = liftIO Time.getCurrentTime
+getCurrentTime :: Monad.MonadIO m => m UTCTime
+getCurrentTime = Monad.liftIO Time.getCurrentTime

@@ -2,7 +2,10 @@
 {-# LANGUAGE ConstraintKinds #-}
 
 module Prolude.MongoDB
-  ( module Database.MongoDB
+  ( -- * MongoDB re-exports
+    module Database.MongoDB
+    -- * Type aliases
+    -- $type
   , MongoAction
   , MongoCollection
   , MongoDatabase
@@ -12,6 +15,8 @@ module Prolude.MongoDB
   , MongoQuery
   , MongoValue
   , MongoVal
+    -- * Pattern synonyms
+    -- $synonyms
   , pattern MongoArray
   , pattern MongoBin
   , pattern MongoBool
@@ -32,6 +37,8 @@ module Prolude.MongoDB
   , pattern MongoUserDef
   , pattern MongoUTC
   , pattern MongoUuid
+    -- * Function aliases
+    -- $functions
   , mongoFailed
   , mongoInsert_
   , mongoModified
@@ -42,12 +49,24 @@ where
 
 import Prolude.Core
 
-import Control.Monad.IO.Class (MonadIO)
 import Database.MongoDB (ObjectId, UpdateOption(MultiUpdate), fval, genObjectId, (=:))
+import qualified Control.Monad.IO.Class as Monad
 import qualified Data.Int as Int
 import qualified Data.Text as Text
 import qualified Data.Time as Time
 import qualified Database.MongoDB as Mongo
+
+{- $type
+We created type aliases for specific Mongo types. These include: Action, Collection, Database, Document, Field, Label, Query, Selector, Val, and Value.
+-}
+
+{- $synonyms
+We created pattern synonyms for the MongoValue constructors.
+-}
+
+{- $functions
+We created aliases for specific Mongo functions. These include: failed, insert_, nModified, select, and updateMany.
+-}
 
 type MongoAction = Mongo.Action
 type MongoCollection = Mongo.Collection
@@ -146,7 +165,7 @@ pattern MongoMinMax x = Mongo.MinMax x
 mongoFailed :: Mongo.WriteResult -> Bool
 mongoFailed = Mongo.failed
 
-mongoInsert_ :: MonadIO m => MongoCollection -> MongoDocument -> MongoAction m ()
+mongoInsert_ :: Monad.MonadIO m => MongoCollection -> MongoDocument -> MongoAction m ()
 mongoInsert_ = Mongo.insert_
 
 mongoModified :: Mongo.WriteResult -> Maybe Int
@@ -156,7 +175,7 @@ mongoSelect :: MongoSelector -> MongoCollection -> MongoQuery
 mongoSelect = Mongo.select
 
 mongoUpdateMany
-  :: MonadIO m
+  :: Monad.MonadIO m
   => MongoCollection
   -> [(MongoSelector, MongoDocument, [UpdateOption])]
   -> MongoAction m Mongo.WriteResult

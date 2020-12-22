@@ -1,37 +1,45 @@
 module Prolude.Core
-  ( module Control.Applicative
+  ( -- * Applicative re-exports
+    module Control.Applicative
+    -- * Monad re-exports
   , module Control.Monad
   , module Control.Monad.Fail
+  , module Data.Monoid
+    -- * Base re-exports
   , module Data.Bool
-  , module Data.Char
   , module Data.Either
   , module Data.Eq
   , module Data.Foldable
   , module Data.Function
   , module Data.Functor
-  , module Data.Int
   , module Data.Kind
-  , module Data.List
-  , module Data.Monoid
   , module Data.Ord
   , module Data.Proxy
   , module Data.Semigroup
-  , module Data.String
   , module Data.Traversable
-  , module Data.Tuple
-  , module Data.Word
   , module GHC.Base
-  , module GHC.Enum
   , module GHC.Err
-  , module GHC.Float
   , module GHC.Generics
   , module GHC.IO.Exception
-  , module GHC.List
-  , module GHC.Num
-  , module GHC.Real
   , module GHC.Show
   , module System.IO
   , module Text.Read
+    -- * List re-exports
+  , module Data.List
+  , module GHC.List
+    -- * Number re-exports
+  , module Data.Int
+  , module GHC.Enum
+  , module GHC.Float
+  , module GHC.Num
+  , module GHC.Real
+    -- * String + Text re-exports
+  , module Data.Char
+  , module Data.String
+  , module Data.Word
+    -- * Tuple re-exports
+  , module Data.Tuple
+    -- * Identity
   , identity
   )
 where
@@ -106,4 +114,3 @@ import Text.Read (Read, read)
 identity :: a -> a
 identity x = x
 {-# INLINE identity #-}
-

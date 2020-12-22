@@ -1,7 +1,11 @@
 module Prolude.Foldable
-    ( module Data.Foldable
+    ( -- * Foldable re-exports
+      module Data.Foldable
+      -- * Map re-exports
     , module Data.Map
+      -- * Set re-exports
     , module Data.Set
+      -- * GHC re-exports
     , module GHC.Exts
     )
 where

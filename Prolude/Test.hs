@@ -4,8 +4,11 @@
 {-# LANGUAGE UndecidableInstances #-}
 
 module Prolude.Test 
-  ( module Test.QuickCheck
+  ( -- * QuickCheck re-exports
+    module Test.QuickCheck
+    -- * Type
   , ArbitraryUniform(..)
+    -- * Function
   , arbitraryIO
   )
 where

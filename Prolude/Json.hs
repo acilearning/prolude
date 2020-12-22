@@ -1,19 +1,25 @@
 module Prolude.Json
-  ( module Data.Aeson
+  ( -- * Aeson re-exports
+    module Data.Aeson
+    -- * Aeson.Types re-exports
   , module Data.Aeson.Types
+    -- * Aeson functions
   , jsonEitherDecode
   , jsonEncode
   )
 where
 
-import Data.Aeson (FromJSON, ToJSON, eitherDecode, encode, withObject, withText)
+import Data.Aeson (withObject, withText)
 import Data.Aeson.Types (Parser)
-import Data.ByteString.Lazy (ByteString)
-import Data.Either (Either)
-import Data.String (String)
+import qualified Data.Aeson as Aeson
+import qualified Data.ByteString.Lazy as ByteString
+import qualified Data.Either as Either
+import qualified Data.String as String
 
-jsonEitherDecode :: FromJSON a => ByteString -> Either String a
-jsonEitherDecode = eitherDecode
+-- | Function alias for Aeson.eitherDecode
+jsonEitherDecode :: Aeson.FromJSON a => ByteString.ByteString -> Either.Either String.String a
+jsonEitherDecode = Aeson.eitherDecode
 
-jsonEncode :: ToJSON a => a -> ByteString
-jsonEncode = encode
+-- | Function alias for Aeson.encode
+jsonEncode :: Aeson.ToJSON a => a -> ByteString.ByteString
+jsonEncode = Aeson.encode
