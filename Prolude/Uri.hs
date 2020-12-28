@@ -3,7 +3,6 @@ module Prolude.Uri
     -- * Type alias
     Uri
     -- * Functions
-  , appendPathToUri
   , stringToUri
   , textToUri
   , uriToString
@@ -52,15 +51,3 @@ uriToString uri = URI.uriToString Core.identity uri ""
 
 uriToText :: URI.URI -> Text.Text
 uriToText = Text.stringToText . uriToString
-
-appendPathToUri :: String.String -> URI.URI -> URI.URI
-appendPathToUri x =
-  let (path, query) = break (== '?') x
-  in
-    URI.relativeTo URI.URI
-      { URI.uriScheme = ""
-      , URI.uriAuthority = Nothing
-      , URI.uriPath = path
-      , URI.uriQuery = query
-      , URI.uriFragment = ""
-      }
