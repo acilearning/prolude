@@ -11,7 +11,8 @@ import Servant.API
   ( (:<|>)((:<|>))
   , (:>)
   , Delete
-  , FromHttpApiData
+  , DeleteNoContent
+  , FromHttpApiData(parseHeader, parseQueryParam, parseUrlPiece)
   , Get
   , GetNoContent
   , NoContent(..)
@@ -21,6 +22,7 @@ import Servant.API
   , PutNoContent
   , ReqBody
   , Summary
+  , ToHttpApiData
   )
 import qualified Servant.API as Servant
 
