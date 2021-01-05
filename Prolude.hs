@@ -20,6 +20,7 @@ module Prolude
   , module Prolude.MongoDB
   , module Prolude.Persist
   , module Prolude.Prim
+  , module Prolude.Servant
   , module Prolude.Swagger
   , module Prolude.Test
   , module Prolude.Text
@@ -43,6 +44,7 @@ import Prolude.MonadIO
 import Prolude.MongoDB
 import Prolude.Persist
 import Prolude.Prim
+import Prolude.Servant
 import Prolude.Swagger
 import Prolude.Test
 import Prolude.Text
