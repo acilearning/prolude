@@ -49,9 +49,6 @@ library
         base >= 4.13.0 && < 4.15
         , aeson >= 1.4.7 && < 1.6
         , amazonka >= 1.6.0 && < 1.7
-        , amazonka-core >= 1.6.0 && < 1.7
-        , amazonka-s3 >= 1.6.0 && < 1.7
-        , amazonka-sns >= 1.6.0 && < 1.7
         , bytestring >= 0.10.10 && < 0.11
         , cassava >= 0.5.2.0 && < 0.6
         , containers >= 0.6.2 && < 0.7
