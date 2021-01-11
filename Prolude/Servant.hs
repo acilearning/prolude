@@ -4,6 +4,7 @@ module Prolude.Servant
     -- * Alias types
   , HttpDescription
   , HttpJson
+  , HttpSummary
   )
 where
 
@@ -21,10 +22,10 @@ import Servant.API
   , Put
   , PutNoContent
   , ReqBody
-  , Summary
   , ToHttpApiData
   )
 import qualified Servant.API as Servant
 
 type HttpDescription = Servant.Description
 type HttpJson = Servant.JSON
+type HttpSummary = Servant.Summary
