@@ -1,6 +1,6 @@
 module Prolude.Servant
   ( -- * Servant re-exports
-    module Servant
+    module Servant.API
     -- * Alias types
   , HttpDescription
   , HttpJson
