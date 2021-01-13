@@ -7,6 +7,7 @@ module Prolude.Core
   , module Data.Monoid
     -- * Base re-exports
   , module Data.Bool
+  , module Data.Bifunctor
   , module Data.Either
   , module Data.Eq
   , module Data.Foldable
@@ -48,6 +49,7 @@ import Control.Applicative (Applicative(pure, (*>), (<*), (<*>)))
 import Control.Monad (Monad((>>), (>>=)))
 import Control.Monad.Fail (MonadFail(fail))
 import Data.Bool (Bool(False, True), not, otherwise, (&&), (||))
+import Data.Bifunctor (Bifunctor(bimap, first, second))
 import Data.Char (Char, chr, ord)
 import Data.Either (Either(Left, Right), either)
 import Data.Eq (Eq((/=), (==)))
