@@ -3,4 +3,4 @@ module Prolude.Lens
     )
 where
 
-import Control.Lens ((.~), (^.), set, view)
+import Control.Lens ((.~), set, view)
