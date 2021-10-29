@@ -44,6 +44,15 @@ module Prolude.MongoDB
   , mongoModified
   , mongoSelect
   , mongoUpdateMany
+    -- * Operators aliases
+    -- $operators
+  , (>=:)
+  , (>:)
+  , (<=:)
+  , (<:)
+  , (<-:)
+  , (!<-:)
+  , (!=:)
   )
 where
 
@@ -68,6 +77,10 @@ We created pattern synonyms for the MongoValue constructors.
 We created aliases for specific Mongo functions. These include: failed, insert_, nModified, select, and updateMany.
 -}
 
+{- $operators
+We created aliases for specific Mongo operators. These include: (>=:), (>:), (<=:), (<:), (<-:), (!<-:), and (!=:).
+-}
+
 type MongoAction = Mongo.Action
 type MongoCollection = Mongo.Collection
 type MongoDatabase = Mongo.Database
@@ -79,6 +92,27 @@ type MongoSelector = Mongo.Selector
 type MongoVal = Mongo.Val
 
 type MongoValue = Mongo.Value
+
+(>=:) :: MongoVal v => MongoLabel -> v -> MongoField
+f >=: x = f =: [(Text.pack "$gte") =: x]
+
+(>:) :: MongoVal v => MongoLabel -> v -> MongoField
+f >: x = f =: [(Text.pack "$gt") =: x]
+
+(<=:) :: MongoVal v => MongoLabel -> v -> MongoField
+f <=: x = f =: [(Text.pack "$lte") =: x]
+
+(<:) :: MongoVal v => MongoLabel -> v -> MongoField
+f <: x = f =: [(Text.pack "$lt") =: x]
+
+(<-:) :: MongoVal v => MongoLabel -> [v] -> MongoField
+f <-: x = f =: [(Text.pack "$in") =: x]
+
+(!<-:) :: MongoVal v => MongoLabel -> [v] -> MongoField
+f !<-: x = f =: [(Text.pack "$nin") =: x]
+
+(!=:) :: MongoVal v => MongoLabel -> v -> MongoField
+f !=: x = f =: [(Text.pack "$ne") =: x]
 
 pattern MongoFloat :: Double -> MongoValue
 pattern MongoFloat x = Mongo.Float x
