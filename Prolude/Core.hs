@@ -113,6 +113,8 @@ import GHC.Real
   , (^^)
   )
 import GHC.Show (Show, show)
+import GHC.Stack (HasCallStack)
+import Numeric.Natural (Natural)
 import System.IO (FilePath, IO, print, putStr, putStrLn)
 import Text.Read (Read, read)
 
