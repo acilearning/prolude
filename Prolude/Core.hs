@@ -56,6 +56,7 @@ import Control.Monad.IO.Class (MonadIO, liftIO)
 import Data.Bool (Bool(False, True), not, otherwise, (&&), (||))
 import Data.Bifunctor (Bifunctor(bimap, first, second))
 import Data.Char (Char, chr, ord)
+import Data.Coerce (coerce)
 import Data.Either (Either(Left, Right), either)
 import Data.Eq (Eq((/=), (==)))
 import Data.Foldable
