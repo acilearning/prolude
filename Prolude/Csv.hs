@@ -1,17 +1,17 @@
 {-# LANGUAGE ConstraintKinds #-}
 
 module Prolude.Csv
-    ( -- * Csv re-exports
-      module Data.Csv
-      -- * Alias types
-      -- $alias
-    , FromCsvField
-    , ToCsvField
-      -- * Alias functions
-      -- $functions
-    , parseCsvField
-    , toCsvField
-    )
+  ( -- * Csv re-exports
+    module Data.Csv
+    -- * Alias types
+    -- $alias
+  , FromCsvField
+  , ToCsvField
+    -- * Alias functions
+    -- $functions
+  , parseCsvField
+  , toCsvField
+  )
 where
 
 import Data.Csv 

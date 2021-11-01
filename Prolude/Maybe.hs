@@ -1,8 +1,8 @@
 module Prolude.Maybe
-    ( module Data.Maybe
-    , note
-    , hush
-    )
+  ( module Data.Maybe
+  , note
+  , hush
+  )
 where
 
 import Data.Maybe 
