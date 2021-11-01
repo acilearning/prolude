@@ -42,12 +42,15 @@ module Prolude.Core
   , module Data.Tuple
     -- * Identity
   , identity
+  , stm
   )
 where
 
 import Control.Applicative (Applicative(pure, (*>), (<*), (<*>)))
 import Control.Monad (Monad((>>), (>>=)))
 import Control.Monad.Fail (MonadFail(fail))
+import Control.Concurrent.STM (STM, atomically)
+import Control.Monad.IO.Class (MonadIO, liftIO)
 import Data.Bool (Bool(False, True), not, otherwise, (&&), (||))
 import Data.Bifunctor (Bifunctor(bimap, first, second))
 import Data.Char (Char, chr, ord)
@@ -55,7 +58,7 @@ import Data.Either (Either(Left, Right), either)
 import Data.Eq (Eq((/=), (==)))
 import Data.Foldable
   (Foldable(elem, foldMap, foldr, length, null, sum), all, and, any, concat, concatMap, mapM_, or)
-import Data.Function ((&))
+import Data.Function ((&), (.))
 import Data.Functor (Functor(fmap, (<$)), (<$>))
 import Data.Int (Int)
 import Data.Kind (Constraint, Type)
@@ -116,3 +119,6 @@ import Text.Read (Read, read)
 identity :: a -> a
 identity x = x
 {-# INLINE identity #-}
+
+stm :: MonadIO m => STM a -> m a
+stm = liftIO . atomically
