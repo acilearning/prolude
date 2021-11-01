@@ -11,6 +11,7 @@ module Prolude
   , module Prolude.ByteString
   , module Prolude.Core
   , module Prolude.Csv
+  , module Prolude.Esqueleto
   , module Prolude.Exception
   , module Prolude.Foldable
   , module Prolude.Json
@@ -36,6 +37,7 @@ import Prolude.Aws
 import Prolude.ByteString
 import Prolude.Core
 import Prolude.Csv
+import Prolude.Esqueleto
 import Prolude.Exception
 import Prolude.Foldable
 import Prolude.Json
