@@ -40,6 +40,8 @@ module Prolude.Core
   , module Data.Word
     -- * Tuple re-exports
   , module Data.Tuple
+    -- * Witch re-exports
+  , module Witch
     -- * Identity
   , identity
   , stm
@@ -117,6 +119,7 @@ import GHC.Stack (HasCallStack)
 import Numeric.Natural (Natural)
 import System.IO (FilePath, IO, print, putStr, putStrLn)
 import Text.Read (Read, read)
+import Witch
 
 identity :: a -> a
 identity x = x
