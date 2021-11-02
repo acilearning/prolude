@@ -34,6 +34,7 @@ module Prolude.Core
   , module GHC.Float
   , module GHC.Num
   , module GHC.Real
+  , module Numeric.Natural
     -- * String + Text re-exports
   , module Data.Char
   , module Data.String
@@ -61,7 +62,7 @@ import Data.Either (Either(Left, Right), either)
 import Data.Eq (Eq((/=), (==)))
 import Data.Foldable
   (Foldable(elem, foldMap, foldr, length, null, sum), all, and, any, concat, concatMap, mapM_, or)
-import Data.Function ((&), (.))
+import Data.Function ((&))
 import Data.Functor (Functor(fmap, (<$)), (<$>))
 import Data.Int (Int)
 import Data.Kind (Constraint, Type)
