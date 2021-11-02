@@ -25,6 +25,8 @@ module Prolude.Core
   , module GHC.Show
   , module System.IO
   , module Text.Read
+    -- * Stack re-exports
+  , module GHC.Stack
     -- * List re-exports
   , module Data.List
   , module GHC.List
