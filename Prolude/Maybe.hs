@@ -5,7 +5,7 @@ module Prolude.Maybe
   )
 where
 
-import Data.Maybe 
+import Data.Maybe
     ( Maybe(Just, Nothing)
     , catMaybes
     , fromMaybe

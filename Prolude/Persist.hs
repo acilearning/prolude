@@ -1,4 +1,4 @@
-module Prolude.Persist 
+module Prolude.Persist
   ( -- * Persist re-exports
     -- | These are our re-exports from Persist. They include: Entity(..), SqlType(..), exists, insert, insertMany_, and selectList
     module Database.Persist
@@ -13,7 +13,7 @@ module Prolude.Persist
   , module Database.Persist.Sql
   ) where
 
-import Database.Persist 
+import Database.Persist
   ( Entity(..)
   , SqlType(..)
   , exists

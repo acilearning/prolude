@@ -9,7 +9,7 @@ module Prolude.Swagger
   -- * Functions
   , defaultDeclareNamedSchema
   , nameSchema
-  ) 
+  )
 where
 
 import qualified Data.Swagger as Swagger

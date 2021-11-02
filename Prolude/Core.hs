@@ -8,6 +8,7 @@ module Prolude.Core
     -- * Base re-exports
   , module Data.Bool
   , module Data.Bifunctor
+  , module Data.Coerce
   , module Data.Either
   , module Data.Eq
   , module Data.Foldable
@@ -25,6 +26,8 @@ module Prolude.Core
   , module GHC.Show
   , module System.IO
   , module Text.Read
+    -- * Stack re-exports
+  , module GHC.Stack
     -- * List re-exports
   , module Data.List
   , module GHC.List

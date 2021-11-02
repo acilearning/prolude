@@ -20,6 +20,8 @@ jobs:
           ghc-version: '8.10.2'
           cabal-version: '3.4.0.0'
 
+      - run: cabal configure --flags pedantic
+
       - run: cabal freeze
 
       - run: cat cabal.project.freeze
@@ -34,7 +36,7 @@ jobs:
       - run: cabal build
 
       - run: cabal test --test-show-details direct
-      
+
       - run: cabal sdist
 
       - uses: actions/upload-artifact@v2

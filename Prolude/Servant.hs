@@ -8,7 +8,7 @@ module Prolude.Servant
   )
 where
 
-import Servant.API 
+import Servant.API
   ( (:<|>)((:<|>))
   , (:>)
   , Delete

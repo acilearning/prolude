@@ -1,4 +1,4 @@
-module Prolude.Uri 
+module Prolude.Uri
   ( -- $conversions
     -- * Type alias
     Uri

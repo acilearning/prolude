@@ -1,11 +1,11 @@
-module Prolude.Esqueleto 
+module Prolude.Esqueleto
   ( -- * Esqueleto re-exports
     -- $esqueleto
     module Database.Esqueleto.Experimental
-  ) 
+  )
 where
 
-import Database.Esqueleto.Experimental 
+import Database.Esqueleto.Experimental
   ( (=.)
   , (==.)
   , (!=.)
