@@ -1,4 +1,4 @@
-module Prolude.Lens 
+module Prolude.Lens
     ( module Control.Lens
     )
 where

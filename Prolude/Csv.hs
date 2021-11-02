@@ -14,7 +14,7 @@ module Prolude.Csv
   )
 where
 
-import Data.Csv 
+import Data.Csv
     ( DefaultOrdered
     , ToNamedRecord
     )

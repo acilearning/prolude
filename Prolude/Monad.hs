@@ -1,9 +1,9 @@
-module Prolude.Monad 
-  ( module Control.Monad 
+module Prolude.Monad
+  ( module Control.Monad
   )
 where
 
-import Control.Monad 
+import Control.Monad
     ( forever
     , forM
     , forM_

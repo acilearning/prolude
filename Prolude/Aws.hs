@@ -6,7 +6,7 @@ module Prolude.Aws
     -- * Alias functions
   , sendAws
   )
-where 
+where
 
 import Network.AWS (MonadAWS, liftAWS)
 import qualified Network.AWS as Aws

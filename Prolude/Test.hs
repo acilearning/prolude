@@ -3,7 +3,7 @@
 {-# LANGUAGE MonoLocalBinds #-}
 {-# LANGUAGE UndecidableInstances #-}
 
-module Prolude.Test 
+module Prolude.Test
   ( -- * QuickCheck re-exports
     module Test.QuickCheck
     -- * Type

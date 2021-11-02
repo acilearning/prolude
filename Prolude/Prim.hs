@@ -7,7 +7,7 @@ module Prolude.Prim
   , Int16
   , Int32
   , Int64
-  ) 
+  )
 where
 
 import Data.Word (Word8, Word16, Word32, Word64)
