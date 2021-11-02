@@ -8,6 +8,7 @@ module Prolude.Core
     -- * Base re-exports
   , module Data.Bool
   , module Data.Bifunctor
+  , module Data.Coerce
   , module Data.Either
   , module Data.Eq
   , module Data.Foldable
