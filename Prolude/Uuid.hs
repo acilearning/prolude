@@ -1,4 +1,4 @@
-module Prolude.Uuid 
+module Prolude.Uuid
   ( -- * Type alias
     Uuid
     -- * Functions
@@ -15,7 +15,6 @@ import qualified Data.Text as Text
 import qualified Data.UUID as UUID
 import qualified Data.UUID.V4 as UUID
 import qualified Data.Word as Word
-import qualified System.IO as IO
 
 type Uuid = UUID.UUID
 

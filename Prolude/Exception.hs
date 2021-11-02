@@ -9,8 +9,6 @@ module Prolude.Exception
   )
 where
 
-import Prolude.Core
-
 import qualified Control.Exception as UnsafeException
 import Control.Exception.Safe hiding (catchIO, throwM)
 

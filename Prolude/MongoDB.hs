@@ -56,8 +56,6 @@ module Prolude.MongoDB
   )
 where
 
-import Prolude.Core
-
 import Database.MongoDB (ObjectId, UpdateOption(MultiUpdate), fval, genObjectId, (=:))
 import qualified Control.Monad.IO.Class as Monad
 import qualified Data.Int as Int
