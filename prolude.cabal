@@ -27,7 +27,6 @@ library
     exposed-modules:
         Prolude
         Prolude.Aeson
-        Prolude.Aws
         Prolude.ByteString
         Prolude.Core
         Prolude.Csv
@@ -53,7 +52,6 @@ library
     build-depends:
         base >= 4.13.0 && < 4.17
         , aeson >= 1.4.7 && < 1.6 || >= 2.0.3 && < 2.1
-        , amazonka >= 1.6.0 && < 1.7
         , bytestring >= 0.10.10 && < 0.12
         , cassava >= 0.5.2.0 && < 0.6
         , containers >= 0.6.2 && < 0.7

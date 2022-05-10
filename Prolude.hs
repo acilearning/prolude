@@ -7,7 +7,6 @@ License: MIT
 
 module Prolude
   ( module Prolude.Aeson
-  , module Prolude.Aws
   , module Prolude.ByteString
   , module Prolude.Core
   , module Prolude.Csv
@@ -33,7 +32,6 @@ module Prolude
 where
 
 import Prolude.Aeson
-import Prolude.Aws
 import Prolude.ByteString
 import Prolude.Core
 import Prolude.Csv
