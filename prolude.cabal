@@ -2,16 +2,16 @@ cabal-version: >= 1.10
 
 name: prolude
 version: 0.0.0.24
-synopsis: ITProTV's custom prelude
+synopsis: ACI Learning's custom prelude
 description:
-    Prolude is ITProTV's custom prelude.
-    <https://www.itpro.tv>
+    Prolude is ACI Learning's custom prelude.
+    <https://www.acilearning.com>
 
 build-type: Simple
 category: Prelude
 license: MIT
 license-file: LICENSE.txt
-maintainer: ITProTV
+maintainer: ACI Learning
 
 source-repository head
     type: git
