@@ -1,0 +1,8 @@
+packages: .
+
+-- https://github.com/yesodweb/persistent/commit/e7b40f1ff6f4c1ed85bc88eeccc1302174fac701
+source-repository-package
+  location: https://github.com/yesodweb/persistent
+  tag: a5edbcadd96d23ab3586719fb7583aeda55777eb
+  subdir: persistent-mongoDB
+  type: git
