@@ -1,24 +1,18 @@
 on:
-  pull_request:
-    branches:
-      - master
-  push:
-    branches:
-      - master
+  push: null
 
 jobs:
 
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
 
       - uses: actions/checkout@v2
 
       - id: setup-haskell
-        uses: actions/setup-haskell@v1
+        uses: haskell/actions/setup@v2
         with:
-          ghc-version: '8.10.2'
-          cabal-version: '3.4.0.0'
+          ghc-version: '8.10.7'
 
       - run: cabal configure --flags pedantic
 
@@ -35,13 +29,11 @@ jobs:
 
       - run: cabal build
 
-      - run: cabal test --test-show-details direct
-
       - run: cabal sdist
 
       - uses: actions/upload-artifact@v2
         with:
           path: dist-newstyle/sdist/prolude-*.tar.gz
-          name: prolude.tar.gz
+          name: prolude-${{ github.sha }}.tar.gz
 
       - run: cabal check
