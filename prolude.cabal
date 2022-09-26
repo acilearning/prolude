@@ -15,7 +15,7 @@ maintainer: ACI Learning
 
 source-repository head
     type: git
-    location: https://github.com/EdutainmentLIVE/prolude
+    location: https://github.com/acilearning/prolude
 
 flag pedantic
     default: False
