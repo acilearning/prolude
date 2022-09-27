@@ -60,7 +60,7 @@ library
         , mongoDB >= 2.7.0 && < 2.8
         , QuickCheck >= 2.13.2 && < 2.15
         , quickcheck-instances >= 0.3.23 && < 0.4
-        , lens >= 4.18.1 && < 4.20 || >= 5.0.1 && < 5.2
+        , lens >= 4.18.1 && < 4.20 || >= 5.0.1 && < 5.3
         , network-uri >= 2.6.3 && < 2.7
         , persistent >= 2.8 && < 3
         , persistent-mongoDB >= 2.8 && < 3
