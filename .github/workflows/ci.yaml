@@ -1,39 +1,84 @@
 on:
   push: null
+  release:
+    types:
+      - created
 
 jobs:
 
   build:
-    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        ghc:
+          - 9.0.2
+        platform:
+          - ubuntu
+    runs-on: ${{ matrix.platform }}-latest
     steps:
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
+      - run: mkdir artifact
+
+      - id: artifact
+        run: echo '::set-output name=directory::artifact/${{ matrix.platform }}-${{ matrix.ghc }}'
+
+      - run: mkdir ${{ steps.artifact.outputs.directory }}
 
       - id: setup-haskell
         uses: haskell/actions/setup@v2
         with:
-          ghc-version: '8.10.7'
+          ghc-version: ${{ matrix.ghc }}
 
       - run: cabal configure --flags pedantic
+
+      - run: cat cabal.project.local
+
+      - run: cp cabal.project.local ${{ steps.artifact.outputs.directory }}
 
       - run: cabal freeze
 
       - run: cat cabal.project.freeze
+
+      - run: cp cabal.project.freeze ${{ steps.artifact.outputs.directory }}
 
       - uses: actions/cache@v2
         with:
           path: ${{ steps.setup-haskell.outputs.cabal-store  }}
           key: ${{ hashFiles('cabal.project.freeze') }}
 
+      - run: cabal build --only-download
+
       - run: cabal build --only-dependencies
 
       - run: cabal build
 
-      - run: cabal sdist
+      - run: cabal sdist --output-dir ${{ steps.artifact.outputs.directory }}
 
       - uses: actions/upload-artifact@v2
         with:
-          path: dist-newstyle/sdist/prolude-*.tar.gz
-          name: prolude-${{ github.sha }}.tar.gz
+          path: artifact
+          name: prolude-${{ github.sha }}
 
       - run: cabal check
+
+  release:
+    needs: build
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: prolude-${{ github.sha }}
+          path: artifact
+
+      - uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          asset_content_type: application/gzip
+          asset_name: prolude-${{ github.event.release.tag_name }}.tar.gz
+          asset_path: artifact/ubuntu-9.0.2/prolude-${{ github.event.release.tag_name }}.tar.gz
+          upload_url: ${{ github.event.release.upload_url }}
+
+      - run: cabal upload --publish --username '${{ secrets.HACKAGE_USERNAME }}' --password '${{ secrets.HACKAGE_PASSWORD }}' artifact/ubuntu-9.0.2/prolude-${{ github.event.release.tag_name }}.tar.gz
