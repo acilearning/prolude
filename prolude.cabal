@@ -50,7 +50,7 @@ library
         Prolude.Uuid
 
     build-depends:
-        base >= 4.13.0 && < 4.17
+        base >= 4.13.0 && < 4.18
         , aeson >= 1.4.7 && < 1.6 || >= 2.0.3 && < 2.2
         , bytestring >= 0.10.10 && < 0.12
         , cassava >= 0.5.2.0 && < 0.6
